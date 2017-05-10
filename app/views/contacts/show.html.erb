@@ -1,0 +1,8 @@
+<h1> 
+<%= @contact.first_name %>
+<%= @contact.last_name %>
+<%= @contact.phone_number %>
+ </h1>
+
+ <button class="btn btn-primary">  <a href="/contacts/<%=@contact.id%>/edit"><p color: white> Edit Contact </p> </button>
+<%= button_to "Delete Contact", {action: "destroy", id: @contact.id}, method: :delete, data: { confirm: "Are you sure?" } %>

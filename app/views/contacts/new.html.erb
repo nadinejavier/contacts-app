@@ -1,0 +1,14 @@
+<%= form_tag "/contacts/create", method: :post do %>
+
+  <div>
+      Enter first name: <input type="text" id = "first_name" >
+  </div>
+  <div>
+    Enter last name: <input type="text" id = "last_name" >
+  </div>
+  <div>
+    Enter phone number: <input type="text" id = "phone_number" >
+  </div>
+
+  <input type = "submit">
+<% end %>
