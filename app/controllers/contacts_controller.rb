@@ -18,8 +18,10 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.create(
       first_name: params[:first_name], 
+      middle_name: params[:middle_name],
       last_name: params[:last_name], 
-      phone_number: params[:phone_number]
+      phone_number: params[:phone_number],
+      bio: params[:bio]
       )
     render "create.html.erb"
   end
