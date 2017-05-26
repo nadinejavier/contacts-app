@@ -1,3 +1,15 @@
+<div>
+    <% if @contact &&  @contact.errors.any? %>
+      <h4> <%= @@contact.errors.count %> errors prohibited this item to be created </h4>
+      <ul> 
+          <% @contact.errors.full_message.each do |message| %> 
+            <li><%= message %> </li>
+          <% end %> 
+      </ul>
+      <% end %>
+</div>
+
+
 <%= form_tag "/contacts/create", method: :post do %>
 
   <div>
@@ -11,6 +23,8 @@
   <div>
     Enter phone number: <input type="text" id = "phone_number" >
   </div>
+  <div>
+    Enter Address: <input type="text" id= "address" >
   <div>
     Enter Bio: <input type="text" id = "bio" >
 

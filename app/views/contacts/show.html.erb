@@ -4,6 +4,12 @@
 <%= @contact.phone_number %>
 <br>
 Japanese Phone Number: <%= @contact.jap_prefix %>
+<br>
+Groups: <%= @contact.groups.each do |group| %>
+          <%= group.title %>
+          <br>
+          <% end %>
+<br>
  </h1>
  <p> Updated at: <%= @contact.friendly_updated_at %> </p>
 

@@ -21,8 +21,11 @@ class ContactsController < ApplicationController
       middle_name: params[:middle_name],
       last_name: params[:last_name], 
       phone_number: params[:phone_number],
+      #latitude: latitude(params[:address]),
+      #longitude: longitude(params[:address]),
       bio: params[:bio]
       )
+
     render "create.html.erb"
   end
 
@@ -45,5 +48,10 @@ class ContactsController < ApplicationController
     item.destroy
     render "destroy.html.erb"
   end
+
+ # def latitude(address)
+   # coordinates = Geocoder.coordinates(address)
+  #  @latitude = coordinates[0]
+  #end
   
 end
